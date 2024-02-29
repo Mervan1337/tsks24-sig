@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import imageio
 
 
-
+help(signal.convolve2d)
 fig, axes = plt.subplots(nrows=2, ncols=2)
 fig.tight_layout()
 Im = np.double(imageio.imread('Lab3bilder/baboon.tif'))
@@ -58,4 +58,3 @@ plt.show()
 # Answer:
 # b) The resulting image is still blurred, but also darker
 
-# Q10

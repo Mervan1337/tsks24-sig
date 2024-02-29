@@ -6,13 +6,11 @@ import imageio
 
 fig, axes = plt.subplots(nrows=2, ncols=2)
 fig.tight_layout()
-Im = np.double(plt.imread('Lab3bilder/circle.tif'))
+Im = np.double(plt.imread('Lab3bilder/baboon.tif'))
 plt.subplot(2,2,1)
 plt.imshow(Im,'gray',clim=(0,255))
 plt.title('original image')
 plt.colorbar()
-
-
 
 b = np.array([0.5,0.5])
 b2 = np.convolve(b,b).reshape(1,3)
@@ -35,7 +33,6 @@ plt.imshow(Imsobely,'gray',clim=(-128,127))
 plt.title('sobely image')
 plt.colorbar()
 
-#sqrt( (∂f(x,y)/∂x)^2 + (∂f(x,y)/∂y)^2 )
 im2 = np.sqrt(np.square(Imsobelx) + np.square(Imsobely))
 plt.subplot(2,2,2)
 plt.imshow(im2,'gray',clim=(0,255))
@@ -45,8 +42,3 @@ plt.colorbar()
 
 plt.show()
 
-
-# Q10
-# Answer:
-# a) Positive derivative (transition from dark to bright) gives a bright pixel.
-# Negative derivative (transition from bright to dark) gives a dark pixel.
